@@ -5,7 +5,7 @@
 import { mkdirSync, readFileSync, writeFileSync } from "node:fs";
 
 const ENTRY =
-  "I didn't break production — I just taught it to rest. It will be back up as soon as it finishes its unexpected early retirement.";
+  "Good news: the bug is fixed. Bad news: the fix was deleting production, and the backup was in production.";
 
 const MAX_CHARS = 180;
 
