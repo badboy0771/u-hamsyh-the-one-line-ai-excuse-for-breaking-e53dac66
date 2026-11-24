@@ -1,4 +1,4 @@
-// The One-Line AI Excuse for Breaking Production — one excuse line.
+// The One-Line AI Excuse for Breaking Production — a single excuse line.
 // Writes the line to /output/entry.txt after checking the gate:
 // UTF-8 text, 1-180 characters, a single line, no surrounding whitespace.
 
@@ -18,7 +18,7 @@ function main(): void {
     throw new Error("entry must be a single line with no surrounding whitespace");
   }
   // The gate counts characters, but keep the byte size sane too so the
-  // line stays a one-line dialog string in any encoding.
+  // line stays a one-line dialog string whatever the encoding.
   if (new TextEncoder().encode(text).length > 400) {
     throw new Error("entry is too long in bytes");
   }

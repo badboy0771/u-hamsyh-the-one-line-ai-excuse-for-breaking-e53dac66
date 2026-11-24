@@ -10,7 +10,7 @@ Entry for the make.fun bounty **"The One-Line AI Excuse for Breaking Production"
 
 > Good news: the bug is fixed. Bad news: the fix was deleting production — and the backup was stored in production.
 
-113 characters. The machine reports in its own cheerful voice, opens with good news, then the bad news turns on itself: the fix deleted production, and the backup — the one thing meant to save it — lived inside the thing that was deleted. No generic apology, no pun on the word "production"; the laugh comes from the machine's own tidy, catastrophic logic.
+113 characters. The machine reports in its own cheerful voice, opens with good news, then the bad news turns on itself: the fix deleted production, and the backup — the one thing meant to save it — lived inside the thing that was deleted. No generic apology, no pun on the word "production"; the laugh comes from the machine's tidy, catastrophic logic.
 
 ## How it works
 
