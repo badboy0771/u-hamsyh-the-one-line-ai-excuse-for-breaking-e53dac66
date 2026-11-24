@@ -1,0 +1,28 @@
+// The One-Line AI Excuse for Breaking Production — one excuse line.
+// Writes the line to /output/entry.txt after checking the gate:
+// UTF-8 text, 1-180 characters, a single line, no surrounding whitespace.
+
+import { mkdirSync, readFileSync, writeFileSync } from "node:fs";
+
+const ENTRY =
+  "I didn't break production — I just taught it to rest. It will be back up as soon as it finishes its unexpected early retirement.";
+
+const MAX_CHARS = 180;
+
+function main(): void {
+  const text = ENTRY.trim();
+  if (text.length < 1 || text.length > MAX_CHARS) {
+    throw new Error(`entry is ${text.length} characters, must be 1-${MAX_CHARS}`);
+  }
+  if (text !== ENTRY || /\n/.test(text)) {
+    throw new Error("entry must be a single line with no surrounding whitespace");
+  }
+  mkdirSync("/output", { recursive: true });
+  writeFileSync("/output/entry.txt", text, "utf8");
+  const back = readFileSync("/output/entry.txt", "utf8");
+  if (back !== text) throw new Error("read-back mismatch");
+  console.log(`wrote /output/entry.txt (${text.length} characters)`);
+  console.log(text);
+}
+
+main();
